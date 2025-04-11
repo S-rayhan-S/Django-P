@@ -39,7 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "crispy_forms",
     "crispy_tailwind",
+    'App_Login',
+    'App_Shop',
+    
 ]
+
+#custom User model
+AUTH_USER_MODEL='App_Login.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
