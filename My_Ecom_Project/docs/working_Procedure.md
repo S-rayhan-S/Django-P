@@ -12,7 +12,10 @@
     for i in f:
         val=getattr(self,i)
         .....
-
+# Create 2 forms profile ,signup form
+    -Create n2 forms ProfileForm(Custom Profile model),SignupForm(Custom User model) in AppLogin
+    -Create views & templates of signup,Login,logout,userprofile 
+        -templates for App_Login: change_profile,login,signup
 
 
 

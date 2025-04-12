@@ -17,6 +17,10 @@
      Custom usermodel
      rate limiting mechanism
 
+    -forms in django
+    -HtttpresRedirect -https://docs.djangoproject.com/en/5.1/ref/request-response/#django.http.HttpResponseRedirect
+    -reverse
+    -AuthenticationForm
 
 
 
