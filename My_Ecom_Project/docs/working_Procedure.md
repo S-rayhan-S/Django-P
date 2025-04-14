@@ -16,6 +16,9 @@
     -Create n2 forms ProfileForm(Custom Profile model),SignupForm(Custom User model) in AppLogin
     -Create views & templates of signup,Login,logout,userprofile 
         -templates for App_Login: change_profile,login,signup
+# part 4
+    -Create the profile view & change_profile template
+    -Add flash me3ssages to views & show them in templates
 
 
 

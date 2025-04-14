@@ -22,6 +22,11 @@
     -reverse
     -AuthenticationForm
 
+# Messages set up
+    -need to https://docs.djangoproject.com/en/5.2/topics/db/queries/
+# Product Model
+    -verbose name
+    -ordering in db
 
 
 

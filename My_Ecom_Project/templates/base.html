@@ -11,7 +11,20 @@
 <body>
 
     <div class="container">
-        {% block BODY_block %}{% endblock BODY_block %}
+        <div class='' >
+            {% if messages %}
+                <div>
+                    {% for message in messages %}
+                        <div class="{{ message.tags }}" style="padding: 10px; margin: 10px 0; background-color: #def; border: 1px solid #ccc; position: relative;" role='alert'>
+                            {{ message }}
+                            <button onclick="this.parentElement.style.display='none'" style="position: absolute; top: 5px; right: 10px; background: none; border: none; font-weight: bold;">×</button>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+        </div>
+        {% block body_block %}{% endblock body_block %}
     </div>
     
 </body>

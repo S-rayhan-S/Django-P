@@ -1,43 +1,18 @@
 {% extends "base.html" %}
 {% load tailwind_filters %}
 
-{% block title_block %}Login{% endblock title_block %}
+{% block title_block %}Profile{% endblock title_block %}
 
 {% block body_block %}
-    <h2>Login: </h2>
+    <h2>Change Profile Info: </h2>
     <form method="POST">
-        {{form|crispy}}
+        {{form |crispy}}
         {% csrf_token %}
         <button type='submit' class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            Login
+            change
           </button>
     </form>
 
-    <br>
-    <br>
-    <br>
-    <p>Dosen't have an account? <a href="{% url "App_Login:signup" %}">Create New Account</a></p>
+   
 
 {% endblock body_block %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

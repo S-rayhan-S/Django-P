@@ -62,7 +62,7 @@ ROOT_URLCONF = 'My_Ecom_Project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR/ "templates"],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -141,3 +141,16 @@ CRISPY_TEMPLATE_PACK = "tailwind"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_URL = "/account/login"
+
+#Custom message color
+from django.contrib.messages import constants as messages
+
+MESSAGE_TAGS = {
+    messages.DEBUG: 'bg-gray-500',
+    messages.INFO: 'bg-blue-500',
+    messages.SUCCESS: 'bg-green-500',
+    messages.WARNING: 'bg-yellow-500',
+    messages.ERROR: 'bg-red-500',
+}
