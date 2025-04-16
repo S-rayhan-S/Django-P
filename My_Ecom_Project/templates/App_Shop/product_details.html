@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% comment %} {% load tailwind_filters %} {% endcomment %}
+
+{% block title_block %}Product Details{% endblock title_block %}
+
+{% block body_block %}
+    
+      {% comment %} {{object.name}} {% endcomment %}
+
+      <body class="bg-gray-100 p-6 m-6 font-sans">
+              <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg overflow-hidden flex flex-col md:flex-row">
+              <!-- Left: Product Image -->
+              <div class="md:w-1/2">
+                  <img src="/media/{{product.mainimage}}" alt="Product Image" class="w-full h-full object-cover">
+              </div>
+
+              <!-- Right: Product Details -->
+              <div class="md:w-1/2 p-6 flex flex-col justify-between">
+                  <div>
+                      <h2 class="text-2xl font-semibold mb-2">{{object.name}}</h2>
+                      <p class="text-xl text-green-600 font-bold mb-4">BDT &#2547 {{object.price}}</p>
+                      <p class="text-gray-700 mb-6">
+                          <p class="font-bold">Description</p>
+                          {{object.detail_text | linebreaksbr}}
+                      </p>
+                      <div class="flex justify-center mt-6">
+                          <button type="submit" class="w-2/5 bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg transition justify-content:center">
+                                Add to Cart
+                          </button>
+                      </div>
+                      
+                  </div>
+
+                  
+              </div>
+          </div>
+
+      </body>
+
+      
+    
+
+   
+
+{% endblock body_block %}
+
+{% comment %}
+image,  prdct name, price,description,add_to-cart
+  
+      
+{% endcomment %}

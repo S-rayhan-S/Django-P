@@ -20,7 +20,15 @@
     -Create the profile view & change_profile template
     -Add flash me3ssages to views & show them in templates
 
-
+# Design the Home page & Navbar part-6
+        -Show all the featured products & their details in home page
+            -name,oldProce,new discounted prce,image
+        -home inherits base.html
+        -add Navbar to base.html 
+            -add cart & collapsable/dropsown burger  menue to navbar
+            -username,profile,logout,orders 
+# Cart Order model
+    -
 
 
 

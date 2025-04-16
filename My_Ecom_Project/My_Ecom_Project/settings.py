@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "crispy_tailwind",
     'App_Login',
     'App_Shop',
+    'App_Order'
     
 ]
 

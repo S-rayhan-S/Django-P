@@ -1,18 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-
-    <title>{% block title_block %}E-com | Bohubrihi{% endblock title_block %}</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Navbar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100">
 
-    <div class="container">
-        {% block BODY_block %}{% endblock BODY_block %}
+  <nav class="bg-white shadow-md">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      
+      <!-- Left Side (Logo + Username) -->
+      <div class="flex space-x-6 text-sm">
+        <a href="#" class="text-gray-700 hover:text-black font-semibold">Django E-Com</a>
+        {% comment %} <a href="#" class="text-gray-700 hover:text-black">{{request.user.profile.username}}</a> {% endcomment %}
+        {% if request.user.is_authenticated %}
+            {% comment %} LOGGED IN: {{ request.user.email }}
+            PROFILE: {{ request.user.profile.username }} {% endcomment %}
+                <a href="#" class="text-gray-700 hover:text-black">{{ request.user.profile.username|default:"No username" }}
+                </a>
+
+            {% comment %} {% else %}
+            NOT LOGGED IN {% endcomment %}
+            {% endif %}
+      </div>
+
+      <!-- Right Side (Menu) -->
+      <div class="flex space-x-6 text-sm">
+        {% if request.user.is_authenticated %}
+          <a href="{% url "App_Login:profile" %}" class="text-gray-700 hover:text-black">Profile</a>
+          <a href="#" class="text-gray-700 hover:text-black">Order</a>
+          <a href="{% url "App_Login:logout" %}" class="text-gray-700 hover:text-black">Logout</a>
+        {% else %}
+          <a href="{% url "App_Login:login" %}" class="text-gray-700 hover:text-black">Login</a>
+        {% endif %}
+      </div>
+
     </div>
-    
+  </nav>
+
 </body>
 </html>
